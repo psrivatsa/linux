@@ -1,0 +1,40 @@
+#####################################################################
+# Setting to be added in .cshrc
+#####################################################################
+
+set path = ($path /local/gnu/bin)
+setenv CVSROOT /work/DesignProj
+setenv CVSIGNORE "FileList *cscope.out tags Changes pur*.log .*.swp .nfs*"
+setenv CVSIGNORE "$CVSIGNORE _out_* _read_* _loop_* _test_*"
+alias cstat 'cvs -q -n up -d \!*'
+
+#####################################################################
+# CVS Commands
+#####################################################################
+# Clone Repo
+cvs co v3.1
+
+# repo status
+cstat <filename> (check alias)
+
+# Add files. Also need to add directories first
+cvs add <filename>
+# Checkin
+# First time it is commit. It check's in also
+cvs commit -m "Initial" *.v
+
+# for later changes
+cvs ci -m "comment" <filename>
+
+# Undo changes
+cvs update -C xgpcs_scrm.v
+
+# Check status
+cvs log <filename>
+
+# update repo with new directories
+cvs update -d .
+
+#####################################################################
+# END
+#####################################################################

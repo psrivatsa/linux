@@ -1,0 +1,28 @@
+# Basic permission/prompt settings
+set nobeep                     ## Doesn't beep you on file expansion        
+umask  002                     ## Set default file permissions (rw-rw-r--)  
+set history = 100              ## Default number of history lines          
+set prompt = "[PrashanthK@%m %c4 ]"
+ 
+# Auto complete and display files/folders
+set filec
+set autolist
+
+# Basic Aliases
+alias h        'history'
+alias c        'clear'
+alias ll       "ls -l"
+alias ls       "ls -F"
+alias rm       'rm -i'
+alias del      'rm -i'
+alias cp       'cp -i'
+alias mv       'mv -i'
+ 
+# GVIM Editor Settings
+setenv EDITOR vim
+alias g   '/usr/bin/gvim'
+
+# Tools
+alias oct 'octave --no-gui'
+#source /opt/Xilinx/Vivado/2014.2/settings64.csh
+

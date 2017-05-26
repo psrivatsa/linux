@@ -1,0 +1,39 @@
+#####################################################################
+# install tight vnc
+#####################################################################
+sudo apt-get update
+sudo apt-get install xfce4 xfce4-goodies tightvncserver
+
+# display full screen and keyboard problem in tightvnc
+Add line 'Vncviewer*grabKeyboard: true' in .Xresources file in home area
+
+#####################################################################
+# install real vnc viewer (much better than tightvnc)
+#####################################################################
+# remove tightvnc viewer first
+sudo apt-get -y remove xtightvncviewer
+
+# download from realvnc website
+tar -xvf VNC-6.0.2-Linux-x64-DEB.tar.gz
+sudo dpkg -i VNC-Viewer-6.0.2-Linux-x64.deb
+
+#####################################################################
+# tiger vncviewer
+#####################################################################
+download .deb file
+# install
+sudo dpkg -i xtigervncviewer_1.7.1-1ubuntu1_amd64.deb
+# install dependency
+sudo apt-get install libfltk1.3-dev
+
+# run
+/usr/bin/xtigervncviewer
+
+# remove
+sudo dpkg -r xtigervncviewer
+
+#####################################################################
+# %%%%%%%%% NOTE %%%%%%%%%%%%%%
+# If not able to login to vncservers check if router is restricting connections
+#####################################################################
+
