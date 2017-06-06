@@ -25,3 +25,6 @@
  
 " Set C style indentation
 : set cindent
+
+" System Verilog Syntax
+: au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/verilog_systemverilog.vim
