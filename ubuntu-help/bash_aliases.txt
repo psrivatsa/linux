@@ -1,0 +1,8 @@
+# Aliases
+alias g='/usr/bin/gvim'
+alias c='clear'
+alias h='history'
+alias ll='ls -ltr'
+alias oct='octave --no-gui'
+alias ssh_list='cat ~/.bash_aliases | grep ssh | grep -v \#'
+

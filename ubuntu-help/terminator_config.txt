@@ -1,0 +1,26 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  handle_size = 0
+  inactive_color_offset = 0.72
+  title_receive_bg_color = "#c9c900"
+  title_transmit_bg_color = "#c81000"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    cursor_color = "#839496"
+    cursor_shape = ibeam
+    font = Monospace 11
+    foreground_color = "#839496"
+    scrollbar_position = hidden
+    use_system_font = False

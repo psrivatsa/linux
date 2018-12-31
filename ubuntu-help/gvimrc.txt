@@ -1,30 +1,50 @@
+" Filetype and Syntax Highlighting
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l/%L,%c\ %)%P
+filetype on          " Automatically detect file types
+filetype indent on   " Filetype specific indentation
+filetype plugin on
+set fileencodings=   " don't do any encoding conversion (otherwise munges binary files)
+set laststatus=2       " Always show status line.
+set clipboard^=unnamed
+set clipboard^=unnamedplus " Yanks go on clipboard instead.
+
 " No Wrapping
-: set nowrap
+set nowrap
  
 " Show line number
-: set nu
+set nu
  
 " Set the syntax on
-: syntax on
+syntax on
  
 " Search options ; highlight and incremental search
-: set hlsearch
-: set incsearch
+set hlsearch
+set incsearch
  
 " Auto change directory
-: set autochdir
+set autochdir
  
 " Set the ctags search from current to parent
-: set tags=tags;
+set tags=tags;
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
  
 " Switching between windows using ALT+Arrow keys
-: nmap <silent> <A-Up> :wincmd k<CR>
-: nmap <silent> <A-Down> :wincmd j<CR>
-: nmap <silent> <A-Left> :wincmd h<CR>
-: nmap <silent> <A-Right> :wincmd l<CR>
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
  
 " Set C style indentation
-: set cindent
+": set cindent
+
+" Set font size
+set guifont=Monospace\ 10
+
+" Set default color scheme
+" colorscheme murphy
+colorscheme nobliss
 
 " System Verilog Syntax
-: au BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/verilog_systemverilog.vim
+": autocmd BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/verilog_systemverilog.vim
+autocmd BufNewFile,BufRead *.sv,*.svh,*.vh,*.v so ~/.vim/syntax/systemverilog.vim
+
