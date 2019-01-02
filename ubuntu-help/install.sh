@@ -75,15 +75,26 @@ sudo apt-get install python3
 # Python CSVKIT
 sudo apt-get install python3-csvkit
 sudo apt-get install csvkit
+# ipython3
+sudo apt-get install ipython3
+which ipython3
+# python3 pip
+sudo apt-get install python3-pip
+# Python3 libraries
+pip3 install numpy
+pip3 install matplotlib
+sudo apt-get install python3-tk
 ###############################################################################
 # gimp
 ###############################################################################
 sudo apt-get install gimp
 which gimp
 ###############################################################################
-# TkDiff
+# TkCVS/TkDiff
 ###############################################################################
+sudo apt-get install tkcvs
 sudo apt-get install tkdiff
+which tkcvs
 ###############################################################################
 # meld
 ###############################################################################
@@ -98,5 +109,14 @@ tar -xvf VNC-6.0.2-Linux-x64-DEB.tar.gz
 sudo dpkg -i VNC-Viewer-6.0.2-Linux-x64.deb
 # If not able to login to vncservers check if router is restricting connections
 ###############################################################################
+# Google Chrome
 ###############################################################################
+sudo apt-get install -y chromium-browser
+###############################################################################
+# GIT
+###############################################################################
+sudo apt install git
+git clone https://github.com/psrivatsa/linux.git
+git config --global user.name psrivatsa
+git config --global user.email "prashanth.srivatsa@gmail.com"
 
