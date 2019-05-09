@@ -31,10 +31,11 @@ which gparted
 sudo apt-get install grive2
 sudo apt-get install grive
 ###############################################################################
-# Play Music TODO
+# Play Music (Not so great. Removed it)
 ###############################################################################
 sudo apt-get install snapd
 sudo snap install google-play-music-desktop-player
+sudo snap remove google-play-music-desktop-player
 ###############################################################################
 # gcc
 ###############################################################################
@@ -68,6 +69,7 @@ which wireshark
 # AWS CLI
 ###############################################################################
 sudo apt-get install awscli
+which aws
 ###############################################################################
 # Python3
 ###############################################################################
@@ -83,6 +85,7 @@ sudo apt-get install python3-pip
 # Python3 libraries
 pip3 install numpy
 pip3 install matplotlib
+pip3 install tkinter
 sudo apt-get install python3-tk
 ###############################################################################
 # gimp
@@ -120,3 +123,10 @@ git clone https://github.com/psrivatsa/linux.git
 git config --global user.name psrivatsa
 git config --global user.email "prashanth.srivatsa@gmail.com"
 
+###############################################################################
+# HW Information
+###############################################################################
+sudo apt install hwinfo
+hwinfo
+sudo apt install lsscsi
+lsscsi

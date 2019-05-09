@@ -29,11 +29,17 @@ cvs ci -m "comment" <filename>
 # Undo changes
 cvs update -C xgpcs_scrm.v
 
+# CVS Update to latest
+cvs update -A 
+
 # Check status
 cvs log <filename>
 
 # update repo with new directories
 cvs update -d .
+
+# CVS Tag recursively
+cvs tag -R MODULE_1_20190417 module/
 
 #####################################################################
 # END

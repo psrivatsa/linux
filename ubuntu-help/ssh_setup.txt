@@ -1,0 +1,30 @@
+###############################################################################
+# To login without entering password.
+# CREATE RSA key and copy to VM
+###############################################################################
+# Create Key.
+# Give phrase
+ssh-keygen -t rsa -b 2048
+
+# Copy id_rsa
+ssh-copy-id prashanth@IPAddr
+
+# Check in VM
+.ssh/authorized_keys
+
+# Also permission has to be 644
+
+# Now login
+ssh -X prashanth@IPAddr
+
+###############################################################################
+# Create ssh config file instead of alias for ssh
+# .ssh/config
+###############################################################################
+Host hulk   
+  Hostname IPAddr
+  user prashanth
+  ForwardX11Trusted yes
+  TCPKeepAlive yes
+
+
